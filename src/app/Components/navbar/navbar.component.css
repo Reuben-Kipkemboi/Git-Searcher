@@ -1,3 +1,6 @@
+*{
+    font-family: 'Dancing Script', cursive;
+}
 .navbar{
     border-radius: 8px 0 0 8px;
     background-color: rgb(8, 23, 54);
@@ -10,16 +13,29 @@
     font-size:3vh;
     font-weight: bold;
 }
+#home:hover{
+    color: #ffffff;
+    font-size: 3.5vh;
+}
+
 #back{
     color: rgb(64, 135, 55);
     font-size: 3vh;
     font-weight: bold;
+}
+#back:hover{
+    color: rgb(88, 162, 191);
+    font-size: 3.5vh;
 }
 #Search{
     color: #ffffff;
     font-size: 3vh;
     font-weight: bold;
 
+}
+#Search:hover{
+    color: rgb(64, 135, 55);
+    font-size: 3.5vh;
 }
 
     
