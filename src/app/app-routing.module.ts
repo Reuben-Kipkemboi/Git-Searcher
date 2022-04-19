@@ -9,12 +9,12 @@ const routes: Routes = [
     path: "home",
     component: HomeComponent,
   },
-  // path to our main page
+  // path to our main page and search page +++++************=====###########
   {
     path: "main",
     component: SearchComponent,
   },
-  // route  to our github users details page
+  // default route 
   { path: '', redirectTo: "/home", pathMatch: "full" },
 ];
 
