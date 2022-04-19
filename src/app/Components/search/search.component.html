@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div class="container-fluid">
+  <!-- form for user input -->
+  <div class="col-md-6">
+    <h4 class="text-center fw-bold fs-3" id="heading">Git Search</h4>
+    <!-- <form role="form" [formGroup]="githubsearchForm" (ngSubmit)="getUser()"> -->
+    <form action="" #githubsearchform="ngForm" (ngSubmit)="getUser(githubsearchform)">
+      <div class="form-group mb-3">
+        <label class="sr-only text-center mb-3 fs-4 fw-bold" for="search">Lets do the search for you.....</label>
+        <input type="text" [(ngModel)]="searchingName" name="searchingName" class="form-control" id="search"
+          placeholder="Git hub userName " ngModel required>
+      </div>
+      <button type="submit" id="btn" class="btn btn-outline-danger d-block mx-auto">Search</button>
+    </form>
+  </div>
+</div>
