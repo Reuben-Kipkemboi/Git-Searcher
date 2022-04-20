@@ -9,10 +9,11 @@
         <input type="text"  name="searchingName" class="form-control" id="search"
           placeholder="Git hub userName " ngModel required>
       </div>
-      <button type="submit" id="btn" class="btn btn-outline-danger d-block mx-auto">Search</button>
+      <button type="submit" id="btn" (click) = "getUser(search.value)"  class="btn btn-outline-danger d-block mx-auto">Search</button>
     </form>
   </div>
 </div>
 <!-- #githubsearchform="ngForm" -->
 <!-- (ngSubmit)="getUser(githubsearchform) -->
 <!-- [(ngModel)]="searchingName" -->
+<!--  -->
