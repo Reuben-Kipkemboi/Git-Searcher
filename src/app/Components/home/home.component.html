@@ -1,3 +1,17 @@
 <div class="container">
     <h5> <i class="fa-brands fa-github"></i> Git Search</h5>
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <h4>{{user.login}}</h4>
+            <img src="{{user.avatar_url}}" alt="github profile avatar">
+            <p class="bio">Bio: <b><em>{{user.bio}}</em></b></p>
+            <p class="date">Date Joined <b>{{user.created_at}}</b></p>
+            <p class="date">Profile Last Update <b>{{user.updated_at }}</b></p>
+            <p class="repo">public Repositories <b>{{user.public_repos}}</b></p>
+
+        </div>
+        <div class="col-md-8"></div>
+    </div>
 </div>
+
+ 

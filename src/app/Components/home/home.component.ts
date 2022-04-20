@@ -10,9 +10,9 @@ import { Repos } from 'src/app/Classes/repos';
 })
 export class HomeComponent implements OnInit {
 
-  user!: User;
+  user!: any;
   repos!:Repos
-  
+
   constructor(private dataservice:DataService) { }
 
 
