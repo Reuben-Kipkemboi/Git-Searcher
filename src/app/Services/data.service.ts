@@ -1,29 +1,42 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient} from   '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { User } from '../Classes/user';
-import {Repos } from '../Classes/repos'
+import { Repos } from '../Classes/repos';
+import { observable, Observable } from 'rxjs'
+
+
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  MYKEY: string = environment.APIKEY
+  // user!: User;
+  // repos!: Repos;
+  // newUserData: any = [];
+  // repoData = [];
 
-  user:any;
-  username= "Reuben-Kipkemboi"; 
-  // username : string; 
-  MYKEY: string = environment.APIKEY;
-  USERAPIURL = `https://api.github.com/users/${this.username}`
+  constructor(private http: HttpClient) {
+
+    console.log('our service is doing quite well...');
+  }
+
+
+  username = 'Reuben-Kipkemboi';
+  // username : string;
+  USERAPIURL = `https://api.github.com/users/${this.username}`;
   //  Dependency Injection
-  constructor(private http: HttpClient) { 
-    console.log('our service is doing quite well...')
-  }
 
-  getGithubUserData():Observable<any> {
+  getGithubUserData(): Observable<any> {
     return this.http.get<User>(this.USERAPIURL)
-   
-
   }
-
-
   
+  // Getting other user data
+  getOtherUserData(searchName: string): Observable<any> {
+    return this.http.get<User>(
+      `https://api.github.com/users/${searchName}`
+
+    )
+  }
 }

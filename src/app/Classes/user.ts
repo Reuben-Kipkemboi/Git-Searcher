@@ -3,14 +3,14 @@ constructor (
     public  avatar_url:string,
     public  bio:string,
     public  company:string,
-    public  created_at:string,
-    public  followers:string,
-    public  following:string,
+    public  created_at:any,
+    public  followers:number,
+    public  following:number,
     public  html_url:string,
     public  location:string,
     public  twitter_username:string,
-    public  updated_at:string,
-    public  public_repos:string,
+    public  updated_at:any,
+    public  public_repos:number,
 
 ) {}
 }
